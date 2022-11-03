@@ -1,0 +1,257 @@
+{
+  "scan_date": "2022-11-03 09:27:13",
+  "registries": {
+    "DATASETS": [
+      {
+        "num_modules": 3,
+        "scope": "mmengine",
+        "mmengine/dataset": [
+          "ConcatDataset",
+          "RepeatDataset",
+          "ClassBalancedDataset"
+        ]
+      }
+    ],
+    "DATA_SAMPLERS": [
+      {
+        "num_modules": 2,
+        "scope": "mmengine",
+        "mmengine/dataset": [
+          "DefaultSampler",
+          "InfiniteSampler"
+        ]
+      }
+    ],
+    "EVALUATOR": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/evaluator": [
+          "Evaluator"
+        ]
+      }
+    ],
+    "HOOKS": [
+      {
+        "num_modules": 10,
+        "scope": "mmengine",
+        "mmengine/hooks": [
+          "CheckpointHook",
+          "EMAHook",
+          "EmptyCacheHook",
+          "IterTimerHook",
+          "LoggerHook",
+          "NaiveVisualizationHook",
+          "ParamSchedulerHook",
+          "RuntimeInfoHook",
+          "DistSamplerSeedHook",
+          "SyncBuffersHook"
+        ]
+      }
+    ],
+    "LOG_PROCESSORS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/runner": [
+          "LogProcessor"
+        ]
+      }
+    ],
+    "LOOPS": [
+      {
+        "num_modules": 4,
+        "scope": "mmengine",
+        "mmengine/runner": [
+          "EpochBasedTrainLoop",
+          "IterBasedTrainLoop",
+          "ValLoop",
+          "TestLoop"
+        ]
+      }
+    ],
+    "METRICS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/evaluator": [
+          "DumpResults"
+        ]
+      }
+    ],
+    "MODELS": [
+      {
+        "num_modules": 6,
+        "scope": "mmengine",
+        "mmengine/model": [
+          "StochasticWeightAverage",
+          "ExponentialMovingAverage",
+          "MomentumAnnealingEMA"
+        ],
+        "mmengine/model/base_model": [
+          "BaseDataPreprocessor",
+          "ImgDataPreprocessor"
+        ],
+        "mmengine/model/wrappers": [
+          "BaseTTAModel"
+        ]
+      }
+    ],
+    "MODEL_WRAPPERS": [
+      {
+        "num_modules": 5,
+        "scope": "mmengine",
+        "torch/nn/parallel": [
+          "DistributedDataParallel",
+          "DataParallel"
+        ],
+        "mmengine/model/wrappers": [
+          "MMDistributedDataParallel",
+          "MMSeparateDistributedDataParallel",
+          "MMFullyShardedDataParallel"
+        ]
+      }
+    ],
+    "OPTIMIZERS": [
+      {
+        "num_modules": 15,
+        "scope": "mmengine",
+        "torch/optim": [
+          "ASGD",
+          "Adadelta",
+          "Adagrad",
+          "Adam",
+          "AdamW",
+          "Adamax",
+          "LBFGS",
+          "NAdam",
+          "Optimizer",
+          "RAdam",
+          "RMSprop",
+          "Rprop",
+          "SGD",
+          "SparseAdam"
+        ],
+        "mmengine/optim/optimizer": [
+          "ZeroRedundancyOptimizer"
+        ]
+      }
+    ],
+    "OPTIM_WRAPPERS": [
+      {
+        "num_modules": 2,
+        "scope": "mmengine",
+        "mmengine/optim/optimizer": [
+          "OptimWrapper",
+          "AmpOptimWrapper"
+        ]
+      }
+    ],
+    "OPTIM_WRAPPER_CONSTRUCTORS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/optim/optimizer": [
+          "DefaultOptimWrapperConstructor"
+        ]
+      }
+    ],
+    "PARAM_SCHEDULERS": [
+      {
+        "num_modules": 26,
+        "scope": "mmengine",
+        "mmengine/optim/scheduler": [
+          "StepParamScheduler",
+          "MultiStepParamScheduler",
+          "ConstantParamScheduler",
+          "ExponentialParamScheduler",
+          "CosineAnnealingParamScheduler",
+          "LinearParamScheduler",
+          "PolyParamScheduler",
+          "OneCycleParamScheduler",
+          "CosineRestartParamScheduler",
+          "ConstantLR",
+          "CosineAnnealingLR",
+          "ExponentialLR",
+          "LinearLR",
+          "MultiStepLR",
+          "StepLR",
+          "PolyLR",
+          "OneCycleLR",
+          "CosineRestartLR",
+          "ConstantMomentum",
+          "CosineAnnealingMomentum",
+          "ExponentialMomentum",
+          "LinearMomentum",
+          "MultiStepMomentum",
+          "StepMomentum",
+          "PolyMomentum",
+          "CosineRestartMomentum"
+        ]
+      }
+    ],
+    "RUNNERS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/runner": [
+          "Runner"
+        ]
+      }
+    ],
+    "RUNNER_CONSTRUCTORS": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      }
+    ],
+    "TASK_UTILS": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      }
+    ],
+    "TRANSFORMS": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      }
+    ],
+    "VISBACKENDS": [
+      {
+        "num_modules": 3,
+        "scope": "mmengine",
+        "mmengine/visualization": [
+          "LocalVisBackend",
+          "WandbVisBackend",
+          "TensorboardVisBackend"
+        ]
+      }
+    ],
+    "VISUALIZERS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/visualization": [
+          "Visualizer"
+        ]
+      }
+    ],
+    "WEIGHT_INITIALIZERS": [
+      {
+        "num_modules": 8,
+        "scope": "mmengine",
+        "mmengine/model": [
+          "Constant",
+          "Xavier",
+          "Normal",
+          "TruncNormal",
+          "Uniform",
+          "Kaiming",
+          "Caffe2Xavier",
+          "Pretrained"
+        ]
+      }
+    ]
+  }
+}
